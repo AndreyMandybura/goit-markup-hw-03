@@ -10,8 +10,21 @@
   --btn-dark-bg: #2196f3;
   --btn-light-bg: #f5f4fa;
 
+  --header-border: #ececec;
+  --card-buttom-border: #eeeeee;
+
   --main-font: "Roboto", sans-serif;
   --logo-font: "Raleway", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
@@ -20,6 +33,26 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .visually-hidden {
@@ -39,6 +72,10 @@ body {
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
+}
+
+.nav-logo {
+  margin-right: 93px;
 }
 
 .logo .logo-blue-style {
@@ -80,8 +117,38 @@ body {
   color: var(--logo-link-blue-color);
 }
 
+.page-header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--header-border);
+}
+
+.page-header .container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.menu {
+  display: inline-flex;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .list {
   list-style: none;
+  margin: 0;
+  padding-left: 0;
 }
 
 .dark-bg {
@@ -95,6 +162,7 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  margin-bottom: 0;
   color: var(--hero-color);
 }
 
@@ -111,6 +179,74 @@ body {
   background-color: var(--btn-dark-bg);
 }
 
+.hero-section {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.hero-content {
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-btn {
+  min-width: 200px;
+  min-height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  padding: 10px 32px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0;
+}
+
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+
+.item {
+  margin-left: 30px;
+}
+
+.feature-item {
+  flex-basis: calc((100% - 4 * 30px) / 4);
+}
+
+.about-item {
+  flex-basis: calc((100% - 3 * 30px) / 3);
+}
+
+.team-iteam {
+  flex-basis: calc((100% - 4 * 30px) / 4);
+}
+
+.projects-item {
+  flex-basis: calc((100% - 3 * 30px) / 3);
+}
+
+.card-set .projects-item {
+  margin-top: 30px;
+}
+
+.filters-list {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filters-list .filters-iteam:not(:first-child) {
+  margin-left: 8px;
+}
+
+.filter-btn {
+  padding: 6px 22px;
+}
+
 .feature-title {
   font-weight: 700;
   font-size: 14px;
@@ -119,12 +255,17 @@ body {
   color: var(--title-color);
 }
 
+.feature-section {
+  padding-bottom: 0;
+}
+
 .title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   color: var(--title-color);
+  margin-bottom: 50px;
 }
 
 .iteam-title {
@@ -133,6 +274,8 @@ body {
   line-height: 1.19;
   text-align: center;
   color: var(--title-color);
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .iteam-position {
@@ -147,6 +290,16 @@ body {
 
 .address {
   font-style: inherit;
+  margin-top: 20px;
+}
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-list .footer-list-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .filter {
@@ -157,6 +310,9 @@ body {
   cursor: pointer;
   color: var(--title-color);
   background-color: var(--btn-light-bg);
+
+  border-radius: 4px;
+  border: 0;
 }
 
 .filter:hover,
@@ -165,15 +321,31 @@ body {
   background-color: var(--btn-dark-bg);
 }
 
+.filters-section {
+  padding-bottom: 0;
+}
+
 .title-portfolio {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-color);
+  margin-top: 20px;
+  margin-bottom: 0;
 }
 
 .project-portfolio {
   font-size: 16px;
   line-height: 1.87;
+}
+
+.projects-section {
+  padding-top: 20px;
+}
+
+.card-buttom-border {
+  border: 1px solid var(--card-buttom-border);
+  padding-left: 24px;
+  padding-right: 24px;
 }
