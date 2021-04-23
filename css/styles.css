@@ -64,6 +64,7 @@ p {
   height: 1px !important;
   width: 1px !important;
   overflow: hidden;
+  margin: 0;
 }
 
 .logo {
@@ -223,10 +224,14 @@ p {
 
 .team-iteam {
   flex-basis: calc((100% - 4 * 30px) / 4);
+  display: flex;
+  flex-direction: column;
 }
 
 .projects-item {
   flex-basis: calc((100% - 3 * 30px) / 3);
+  display: flex;
+  flex-direction: column;
 }
 
 .card-set .projects-item {
@@ -274,14 +279,19 @@ p {
   line-height: 1.19;
   text-align: center;
   color: var(--title-color);
-  margin-top: 30px;
   margin-bottom: 10px;
 }
 
 .iteam-position {
   font-size: 16px;
-  line-height: 1.19px;
+  line-height: 1.19;
   text-align: center;
+  margin: 0;
+}
+
+.item-card-bottom {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .txt-deco {
@@ -331,13 +341,13 @@ p {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-color);
-  margin-top: 20px;
   margin-bottom: 0;
 }
 
 .project-portfolio {
   font-size: 16px;
   line-height: 1.87;
+  margin-bottom: 0;
 }
 
 .projects-section {
@@ -345,7 +355,8 @@ p {
 }
 
 .card-buttom-border {
-  border: 1px solid var(--card-buttom-border);
-  padding-left: 24px;
-  padding-right: 24px;
+  border-left: 1px solid var(--card-buttom-border);
+  border-right: 1px solid var(--card-buttom-border);
+  border-bottom: 1px solid var(--card-buttom-border);
+  padding: 20px 24px;
 }
